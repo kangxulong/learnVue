@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // new Promise((resolve,reject) => {
+    //   // 第一次网络请求
+    //   setTimeout(() => {
+    //     resolve('Hello,Promise')
+    //   },1000)
+    // }).then((data) => {
+    //   // 第一次处理数据
+    //   console.log(data);
+    //   console.log(data);
+    //   console.log(data);
+    //   console.log(data);
+
+    //   return new Promise((resolve, reject) => {
+    //     // 第二次网络请求
+    //     setTimeout(() => {
+    //       resolve()
+    //     },1000)
+    //   })
+    // }).then(() => {
+    //   // 第二次数据处理
+    //   console.log('Hello, Vue');
+    //   console.log('Hello, Vue');
+    //   console.log('Hello, Vue');
+    //   console.log('Hello, Vue');
+      
+    //   return new Promise((resolve, reject) => {
+    //     // 第三次网络请求
+    //     setTimeout(() =>{
+    //       resolve()
+    //     },1000)
+    //   })
+    // }).then(() => {
+    //   // 第三次数据处理
+    //   console.log('Hello, python');
+    //   console.log('Hello, python');
+    //   console.log('Hello, python');
+    //   console.log('Hello, python');
+    // })
+
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        //成功的时候调用resolve()
+        // resolve()
+
+        //失败的时候调用reject()
+        reject('error.message')
+      },1000)
+    }).catch(err => {
+      console.log(err);
+    })
+  </script>
+</body>
+</html>
